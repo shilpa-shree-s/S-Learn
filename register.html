@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register SS-Learn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reg.css">
+    <link rel="icon" type="text/css" href="images/s.webp">
+</head>
+<body>
+
+    <div class="banner">
+        <h1>Register</h1>
+        <p>Create your account to access SS-Learn.</p>
+    </div>
+
+    <div class="register-section">
+        <div class="animation-section">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <div id="error-message" style="color: red; font-weight: bold; text-align: center; font-size: 20px; display: none;"></div>
+
+        <div class="register-form">
+            <form id="register-form">
+                <h2>Create Account</h2>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="#" class="social-icon fb">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="footer-content">
+                <h2>Let's Talk</h2>
+                <p>At SS-Learn, we are committed to delivering high-quality education to learners across the globe. Our platform provides accessible and affordable learning opportunities for everyone.</p>
+                <button class="footer-btn">Share your opinion</button>
+            </div>
+            <div class="contact-info">
+                <p><strong>Email:</strong> ssElearn@gmail.com</p>
+                <p><strong>Phone:</strong> (+123) 4567890</p>
+                <p><strong>Address:</strong> 1 EC-city  #04-01, Paya Lebar Quarter bengaluru, 560006</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        document.getElementById("register-form").addEventListener("submit", function(event) {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+            const errorDiv = document.getElementById("error-message");
+
+            const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{5,}$/;
+
+            // Validate password
+            if (!passwordRegex.test(password)) {
+                errorDiv.textContent = `${username}, Password is invalid. It must contain at least one number, one special character, and be at least 5 characters long.`;
+                errorDiv.style.display = "block";
+                event.preventDefault();
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorDiv.textContent = "Passwords do not match. Please try again.";
+                errorDiv.style.display = "block";
+                event.preventDefault();
+                return;
+            }
+            errorDiv.style.display = "none";
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const errorDiv = document.getElementById("error-message");
+            const inputs = document.querySelectorAll("input");
+
+            inputs.forEach(input => {
+                input.addEventListener("input", function() {
+                    if (errorDiv) {
+                        errorDiv.style.display = "none"; // Hide the error message when typing begins
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
