@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="icon" type="text/css" href="images/s.webp">
+    <title>Login - SS-Learn</title>
+</head>
+<body>
+
+    <div class="banner">
+        <h1>Login</h1>
+        <p>Welcome back! Please login to access your courses.</p>
+    </div>
+
+    {% if error_message %}
+        <div id="error-message" style="color: red; font-weight: bold; text-align: center; font-size: 20px;">
+            {{ error_message }}
+        </div>
+    {% endif %}
+
+    <div class="login-section">
+        <div class="login-form">
+            <h2>Login to Your Account</h2>
+            <form action="home.html" method="post">  <!-- Action changed to /login for correct route -->
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="submit" onclick="validatePassword(event)">Login</button>  <!-- Prevent submit on failure -->
+                <div class="login-links">
+                    <a href="forgot.html">Forgot Password?</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="#" class="social-icon fb">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="footer-content">
+                <h2>Let's Talk</h2>
+                <p>At SS-Learn, we are committed to delivering high-quality education to learners across the globe. Our platform provides accessible and affordable learning opportunities for everyone.</p>
+                <button class="footer-btn">Share your opinion</button>
+            </div>
+            <div class="contact-info">
+                <p><strong>Email:</strong> ssElearn@gmail.com</p>
+                <p><strong>Phone:</strong> (+123) 4567890</p>
+                <p><strong>Address:</strong> 1 EC-city  #04-01, Paya Lebar Quarter bengaluru, 560006</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function validatePassword(event) {
+            const password = document.getElementById('password').value; 
+            const regex = /^(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{5,}$/; 
+            if (!regex.test(password)) {
+                const name = document.getElementById("username").value;
+                alert(`${name}, Password is invalid. It must contain at least one number, one special character, and be at least 5 characters long.`);
+                event.preventDefault();  // Prevent form submission
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const errorDiv = document.getElementById("error-message");
+            const inputs = document.querySelectorAll("input");
+
+            inputs.forEach(input => {
+                input.addEventListener("input", function () {
+                    if (errorDiv) {
+                        errorDiv.style.display = "none"; // Hide the error message when typing begins
+                    }
+                });
+            });
+        });
+
+
+    </script>
+
+</body>
+</html>
