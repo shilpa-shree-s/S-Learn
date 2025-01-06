@@ -1,0 +1,316 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+.banner {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 2rem auto;
+    gap: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    flex: 1 1 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.left-section img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.right-section {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #2a3b54;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    background-color: #fff;
+    color: #2a3b54;
+    text-align: left;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon i {
+    font-size: 20px;
+    display: inline-block;
+}
+
+.social-name {
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    color: white;
+    background-color: #007bff;
+}
+
+.social-icon.instagram {
+    background-color: #e1306c;
+    color: white;
+}
+
+.social-icon.twitter {
+    background-color: #55acee;
+    color: white;
+}
+
+.social-icon.linkedin {
+    background-color: #0077b5;
+    color: white;
+}
+
+.social-icon.naukri {
+    background-color: #f7931e;
+    color: white;
+}
+
+.footer-content {
+    flex: 1 1 40%;
+    max-width: 40%;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.footer-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.footer-btn:hover {
+    background-color: #45a049;
+}
+
+.contact-infom {
+    flex: 1 1 30%;
+    max-width: 30%;
+}
+
+.contact-infom p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+/* Mobile screen */
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center; /* Center the items */
+        padding: 0.5rem; /* Adjust padding */
+    }
+
+    nav .logo {
+        font-size: 1.5rem; /* Adjust logo size */
+        margin-bottom: 10px; /* Space below the logo */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Space between the links */
+        padding: 0;
+        align-items: center; /* Center the links */
+        width: 100%; /* Make the links fill the container */
+    }
+
+    nav ul li {
+        margin: 0; /* Remove margin between links */
+        width: 100%; /* Links take full width */
+    }
+
+    nav ul li a {
+        font-size: 1.2rem; /* Adjust font size */
+        padding: 10px 20px; /* Adjust padding */
+        text-align: center; /* Center align text */
+        width: 100%; /* Make the links full width */
+    }
+
+    nav ul li a:hover {
+        color: #ff9800; /* Maintain hover effect */
+    }
+
+    /* Banner adjustments */
+    .banner h1 {
+        font-size: 2rem; /* Adjust font size for banner on mobile */
+    }
+
+    /* Container adjustments */
+    .container {
+        flex-direction: column; /* Stack sections vertically */
+        width: 95%; /* Adjust container width */
+        gap: 15px; /* Adjust gap between sections */
+    }
+
+    /* Left Section adjustments */
+    .left-section {
+        flex: 1 1 100%; /* Make left section full-width */
+        padding: 15px; /* Adjust padding */
+    }
+
+    /* Right Section adjustments */
+    .right-section {
+        flex: 1 1 100%; /* Make right section full-width */
+        padding: 15px; /* Adjust padding */
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center; /* Center the footer items */
+        gap: 20px; /* Add space between footer items */
+    }
+
+    .footer-content {
+        max-width: 100%; /* Make footer content full-width */
+        text-align: center; /* Center the text */
+    }
+
+    .contact-infom {
+        max-width: 100%; /* Make contact info section full-width */
+        text-align: center; /* Center the contact info */
+    }
+
+    .social-icons {
+        flex-direction: row; /* Make social icons row on mobile */
+        gap: 10px; /* Add space between icons */
+        justify-content: center; /* Center the icons */
+    }
+
+    .social-icon {
+        display: inline-flex; 
+        gap: 5px; /* Space between icon and text */
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 12px; /* Adjust padding */
+    }
+
+    .social-icon i {
+        font-size: 18px; /* Adjust icon size */
+    }
+
+    .social-name {
+        font-size: 14px; /* Adjust social name font size */
+    }
+
+    .footer-btn {
+        font-size: 14px; /* Reduce footer button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}

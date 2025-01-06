@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner Styling */
+.banner {
+    background-color: #007bff; /* Dashboard color */
+    color: white;
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    height: auto;
+}
+
+/* Form Styling */
+.login-form {
+    background-color: #f4f4f4;
+    padding: 1.2rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+    color: #007bff; /* Dashboard color */
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.login-form button {
+    width: 100%;
+    background-color: #007bff; /* Dashboard green */
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.login-form button:hover {
+    background-color: #453049; /* Hover green */
+}
+
+/* Login Links */
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.login-links a {
+    color: #007bff; /* Dashboard color */
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2a3b54;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #2a3b54;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.social-icon.fb {
+    background-color: #3b5998;
+}
+
+.social-icon.twitter {
+    background-color: #55acee;
+}
+
+.social-icon.linkedin {
+    background-color: #0077b5;
+}
+
+.footer-content {
+    max-width: 50%;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-btn {
+    ackground-color: #4CAF50;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.footer-btn:hover {
+    background-color: #453049;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}

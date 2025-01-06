@@ -1,0 +1,283 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+    
+.logo{
+/*    color:#FF5733;*/
+    font-size: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+/*logout btn*/
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Slider Container */
+.slider-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Slider Styles */
+.slider {
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Slider Buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20%;
+}
+.slider-button:hover{
+    scale: 1.2;
+    background-color: firebrick;
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background-image: linear-gradient(to bottom, #007bff, white, #007bff);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dashboard-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Dashboard Statistics */
+.dashboard-statistics {
+    margin: 20px;
+    text-align: center;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2a3b54;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #2a3b54;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.social-icon.fb {
+    background-color: #3b5998;
+}
+
+.social-icon.twitter {
+    background-color: #55acee;
+}
+
+.social-icon.linkedin {
+    background-color: #0077b5;
+}
+
+.footer-content {
+    max-width: 50%;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.footer-btn:hover {
+    background-color: #45a049;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+/*mobile*/
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .slider-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .right-panel {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .dashboard-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+}
