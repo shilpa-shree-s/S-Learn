@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="text/css" href="images/s.webp">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 8px 12px;
+        }
+
+        nav ul li a:hover {
+            color: #ff9800;
+        }
+
+        .banner {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .terms-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .terms-header {
+            text-align: center;
+        }
+
+        .terms-header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #333;
+        }
+
+        .terms-section h2 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+
+        .terms-section ul li {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: linear-gradient(135deg, #6e85b7, #b1c6e5);
+        }
+
+        .cube {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            background-color: pink;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        .cube:nth-child() {
+            background-color: pink;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-150px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        .cube:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-duration: 5s;
+        }
+
+        .cube:nth-child(2) {
+            top: 30%;
+            left: 25%;
+            animation-duration: 7s;
+        }
+
+        .cube:nth-child(3) {
+            top: 50%;
+            left: 50%;
+            animation-duration: 6s;
+        }
+
+        .cube:nth-child(4) {
+            top: 70%;
+            left: 70%;
+            animation-duration: 8s;
+        }
+
+        .cube:nth-child(5) {
+            top: 85%;
+            left: 85%;
+            animation-duration: 9s;
+        }
+
+        .emoji {
+            display: none; /* Start with emoji hidden */
+            font-size: 40px; /* Adjust the font-size to increase the emoji size */
+            color: darkred;
+        }
+
+
+        @keyframes popUp {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
+
+    <!-- <nav>
+        <div class="logo">E-learn</div>
+    </nav>
+ -->
+    <div class="banner">
+        <h1>Terms and Conditions</h1>
+    </div>
+
+    <div class="terms-container">
+        <div class="terms-header">
+            <h1>Terms and Conditions</h1>
+            <p>Last Updated: <span id="date">DATE</span></p>
+        </div>
+
+        <div class="terms-section">
+            <h2>1. Introduction</h2>
+            <p onclick="showEmoji(this)">
+                Welcome to SS-Learn. These Terms and Conditions govern your use of our website. By accessing or using this website, you agree to be bound by these terms. If you do not agree, please refrain from using our website. <span class="emoji">👋</span>
+            </p>
+        </div>
+
+        <div class="terms-section">
+            <h2>2. Use of Website</h2>
+            <p onclick="showEmoji(this)">
+                You agree to use our website only for lawful purposes and in a manner that does not infringe the rights of or restrict the use and enjoyment of the website by any third party. Prohibited behavior includes, but is not limited to:
+            </p>
+            <ul>
+                <li>Engaging in fraudulent or harmful activities.</li>
+                <li>Uploading malicious software or viruses.</li>
+                <li>Collecting user data without consent.</li>
+            </ul>
+            <p>
+                Any breach of these terms may result in termination of your access to our website. <span class="emoji">🔒</span>
+            </p>
+        </div>
+
+        <div class="terms-section">
+            <h2>3. Intellectual Property</h2>
+            <p onclick="showEmoji(this)">
+                All content on this website, including text, images, videos, and code, is the property of SS-Learn or its licensors and is protected by copyright laws. You are prohibited from reproducing, distributing, or publicly displaying any content without prior written consent. <span class="emoji">📄</span>
+            </p>
+        </div>
+
+        <div class="terms-section">
+            <h2>4. Limitation of Liability</h2>
+            <p onclick="showEmoji(this)">
+                SS-Learn shall not be held liable for any indirect, incidental, or consequential damages arising from your use of this website. We do not guarantee that our website will be error-free or uninterrupted. Your use of the website is at your own risk. <span class="emoji">⚠️</span>
+            </p>
+        </div>
+
+        <div class="terms-section">
+            <h2>5. Changes to Terms</h2>
+            <p onclick="showEmoji(this)">
+                SS-Learn reserves the right to amend these terms at any time. Changes will be effective immediately upon posting on this page. It is your responsibility to review the terms periodically to ensure compliance. <span class="emoji">✍️</span>
+            </p>
+        </div>
+
+        <div class="terms-section">
+            <h2>6. Governing Law</h2>
+            <p onclick="showEmoji(this)">
+                These terms are governed by the laws of [India/Karnataka]. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts located in [City/Region]. <span class="emoji">⚖️</span>
+            </p>
+        </div>
+
+        <a href="home.html" class="btn">Back to Home</a>
+        <p id="limitedAccess" style="display: none; color: red; font-size:20px;">You have limited access until you agree to the terms.</p>
+    </div>
+    <script>
+        const terms = confirm('Do you agree with our terms and conditions?')
+        function showEmoji(element) {
+            const emoji = element.querySelector('.emoji');
+            if (emoji) {
+                emoji.style.display = "inline"; // Show the emoji
+                emoji.style.animation = "none"; // Reset animation
+                void emoji.offsetWidth; // Trigger reflow
+                emoji.style.animation = "popUp 0.3s ease-in-out forwards"; // Apply animation
+            }
+        };
+
+        const today = new Date();
+        document.getElementById("date").textContent = today.toDateString();
+        
+        if (terms) {
+            //document.getElementById('continueBtn').style.display = 'inline-block';
+            document.getElementById('limitedAccess').style.display = 'none';
+        } else {
+            // Show limited access message
+            document.getElementById('limitedAccess').style.display = 'block';
+            // document.getElementById('continueBtn').style.display = 'none';
+        }
+
+    </script>
+</body>
+</html>
