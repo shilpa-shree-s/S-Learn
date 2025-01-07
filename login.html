@@ -62,24 +62,21 @@
     </footer>
 
     <script>
-        // Show an error message
         function showError(message) {
             const errorDiv = document.getElementById("error-message");
             errorDiv.textContent = message;
             errorDiv.style.display = "block";
         }
 
-        // Validate the password
         function validatePassword(password) {
-            const regex = /^(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{5,}$/;
-            return regex.test(password);
+            const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{5,}$/;
+            return passwordRegex.test(password);
         }
 
-        // Handle the login form submission
         document.getElementById("login-form").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
-            
-            let username = document.getElementById("username").value;
+
+            const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
 
             if (!validatePassword(password)) {
@@ -87,9 +84,15 @@
                 return;
             }
 
-            if (username === "admin" && password === "Admin@123") {
+            // User credentials
+            const users = ['admin', 'ram', 'lucky', 'arjun', 'shilpa'];
+            const pwds = ['Admin@123', 'Ram@123', 'Lucky@123', 'Arjun@123', 'Shilpa@123'];
+
+            const userIndex = users.indexOf(username);
+            if (userIndex !== -1 && pwds[userIndex] === password) {
+                localStorage.setItem('username', username); 
                 alert(`Welcome, ${username}!`);
-                window.location.href = "home.html"; // Redirect to the home page
+                window.location.href = "home.html"; 
             } else {
                 showError("Invalid username or password. Please try again.");
             }
@@ -98,14 +101,9 @@
         document.querySelectorAll("input").forEach(input => {
             input.addEventListener("input", function () {
                 const errorDiv = document.getElementById("error-message");
-                errorDiv.style.display = "none"; // Hide error message when user starts typing
+                errorDiv.style.display = "none";
             });
         });
-        document.querySelector('form').addEventListener('submit', function (event) {
-            username = document.getElementById('username').value;
-            localStorage.setItem('username', username); // Save username in localStorage
-});
     </script>
-
 </body>
 </html>
