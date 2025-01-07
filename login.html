@@ -79,7 +79,7 @@
         document.getElementById("login-form").addEventListener("submit", function (event) {
             event.preventDefault(); // Prevent form submission
             
-            const username = document.getElementById("username").value;
+            let username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
 
             if (!validatePassword(password)) {
@@ -101,6 +101,10 @@
                 errorDiv.style.display = "none"; // Hide error message when user starts typing
             });
         });
+        document.querySelector('form').addEventListener('submit', function (event) {
+            username = document.getElementById('username').value;
+            localStorage.setItem('username', username); // Save username in localStorage
+});
     </script>
 
 </body>
