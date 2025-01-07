@@ -35,15 +35,13 @@
             </ul>
         </nav>
     </header>
-
+    
     <section class="hero">
-    <h1>Welcome <span class="gradient-text">{{ username }}</span></h1>
+        <h1>Welcome <span id="username-display" class="gradient-text"></span></h1>
         <p>Track your progress, explore new courses, and manage your learning journey.</p>
     </section>
 
     <!-- Slider (Video Ads) -->
-    
-
     <section class="dashboard-statistics">
         <h2> Cureent Courses Scale</h2>
         <canvas id="progressChart"></canvas>
@@ -162,6 +160,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const username = localStorage.getItem('username'); // Retrieve the username
+            const usernameDisplay = document.getElementById('username-display');
+            
+            if (username) {
+                usernameDisplay.textContent = username;
+            }
+        });
+    </script>
 </body>
 </html>
 
