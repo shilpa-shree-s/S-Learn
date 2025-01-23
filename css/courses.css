@@ -96,7 +96,7 @@ nav ul li a:hover {
 footer {
     background-color: #2a3b54;
     color: #fff;
-    padding: 40px 0;
+    padding: 40px 20px;
 }
 
 .footer-container {
@@ -105,6 +105,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .social-icons {
@@ -114,58 +116,95 @@ footer {
 }
 
 .social-icon {
-    display: block;
-    width: 40px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: auto;
     background-color: #fff;
     color: #2a3b54;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    border-radius: 50%;
+    text-align: left;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.social-icon.fb {
-    background-color: #3b5998;
+.social-icon i {
+    font-size: 20px;
+    display: inline-block;
+}
+
+.social-name {
+    font-size: 16px;
+}
+
+.social-icon:hover {
+    color: white;
+    background-color: #007bff;
+}
+
+.social-icon.instagram {
+    background-color: #e1306c;
+    color: white;
 }
 
 .social-icon.twitter {
     background-color: #55acee;
+    color: white;
 }
 
 .social-icon.linkedin {
     background-color: #0077b5;
+    color: white;
+}
+
+.social-icon.naukri {
+    background-color: #f7931e;
+    color: white;
 }
 
 .footer-content {
-    max-width: 50%;
+    flex: 1 1 40%;
+    max-width: 40%;
 }
 
 .footer-content h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .footer-content p {
     font-size: 16px;
     margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .footer-btn {
-    ackground-color: #4CAF50;
-    color: #333;
+    background-color: #4CAF50;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    text-align: center;
 }
 
 .footer-btn:hover {
-    background-color: #453049;
+    background-color: #45a049;
 }
 
+.contact-infom {
+    flex: 1 1 30%;
+    max-width: 30%;
+}
+
+.contact-infom p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
 .contact-info p {
     font-size: 16px;
     margin-bottom: 10px;
