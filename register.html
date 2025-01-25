@@ -111,6 +111,23 @@
                 });
             });
         });
+        // Email masking function
+        function maskEmail(email) {
+            const [localPart, domainPart] = email.split('@');
+            if (!domainPart) return email;
+
+            const maskedLocalPart = localPart.length > 2 ? localPart[0] + '*'.repeat(localPart.length - 2) + localPart.slice(-1) : localPart;
+            const [domain, topLevelDomain] = domainPart.split('.');
+            const maskedDomain = domain.length > 2 ? domain[0] + '*'.repeat(domain.length - 2) + domain.slice(-1) : domain;
+
+            return `${maskedLocalPart}@${maskedDomain}.${topLevelDomain}`;
+        }
+
+        document.getElementById("email").addEventListener("input", function(event) {
+            const email = event.target.value;
+            const maskedEmail = maskEmail(email);
+            event.target.value = maskedEmail;
+        });
     </script>
 </body>
 </html>
