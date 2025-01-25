@@ -9,36 +9,36 @@
     <link rel="icon" type="text/css" href="images/s.webp">
 </head>
 <style>
-        /* Internal CSS for the Google Map */
-        .map-container {
-            width: 100%;
-            height: 400px;
-            margin: 20px 0;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    /* Internal CSS for the Google Map */
+    .map-container {
+        width: 100%;
+        height: 400px;
+        margin: 20px 0;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        .map-section {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+    .map-section {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
 
-        .map-section h2 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px;
-        }
+    .map-section h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
 
-        .map-section p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-    </style>
+    .map-section p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+</style>
 <body>
 
     <div class="banner">
@@ -65,7 +65,6 @@
 
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                <input type="text" id="masked-email" style="display: none; margin-top: 5px;" readonly>
 
                 <label for="date">Preferred Visit Date:</label>
                 <input type="date" id="date" name="date" required>
@@ -139,8 +138,7 @@
         document.getElementById("email").addEventListener("input", function(event) {
             const email = event.target.value;
             const maskedEmail = maskEmail(email);
-            document.getElementById("masked-email").value = maskedEmail;
-            document.getElementById("masked-email").style.display = 'block';
+            event.target.value = maskedEmail;
         });
     </script>
 </body>
