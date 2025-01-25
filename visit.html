@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register SS-Learn</title>
+    <title>Schedule SS-Learn</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/reg.css">
     <link rel="icon" type="text/css" href="images/s.webp">
-    <style>
+</head>
+<style>
         /* Internal CSS for the Google Map */
         .map-container {
             width: 100%;
@@ -38,13 +39,11 @@
             margin-bottom: 20px;
         }
     </style>
-</head>
-    
 <body>
 
     <div class="banner">
-        <h1>Register</h1>
-        <p>Create your account to access SS-Learn.</p>
+        <h1>Schedule</h1>
+        <p>Schedule your visit to Our SS-Learn E-city branch.</p>
     </div>
 
     <div class="register-section">
@@ -60,12 +59,13 @@
 
         <div class="register-form">
             <form id="register-form">
-                <h2>Create Account</h2>
+                <h2>Schedule Visit</h2>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username" required>
 
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="text" id="masked-email" style="display: none; margin-top: 5px;" readonly>
 
                 <label for="date">Preferred Visit Date:</label>
                 <input type="date" id="date" name="date" required>
@@ -74,9 +74,10 @@
                 <input type="time" id="time" name="time" required>
                 
                 <label for="message">Additional Message:</label>
-                <textarea id="message" name="message" rows="4" width="100%"></textarea>
+                <textarea id="message" name="message" width="auto"></textarea>
 
                 <button type="submit">Submit</button>
+                <button type="button" onclick="window.location.href='home.html'">Cancel</button>
             </form>
         </div>
     </div>
@@ -95,7 +96,7 @@
             tabindex="0">
         </iframe>
     </section>
-<footer>
+    <footer>
         <div class="footer-container">
             <div class="social-icons">
                 <a href="#" class="social-icon fb">
@@ -108,6 +109,7 @@
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
+
             <div class="footer-content">
                 <h2>Let's Talk</h2>
                 <p>At SS-Learn, we are committed to delivering high-quality education to learners across the globe. Our platform provides accessible and affordable learning opportunities for everyone.</p>
@@ -116,10 +118,11 @@
             <div class="contact-info">
                 <p><strong>Email:</strong> ssElearn@gmail.com</p>
                 <p><strong>Phone:</strong> (+123) 4567890</p>
-                <p><strong>Address:</strong> 1 EC-city  #04-01, Paya Lebar Quarter bengaluru, 560006</p>
+                <p><strong>Address:</strong> 1 EC-city  #04-01, Paya Lebar Quarter Bengaluru, 560006</p>
             </div>
         </div>
     </footer>
+
     <script type="text/javascript">
         // Email masking function
         function maskEmail(email) {
