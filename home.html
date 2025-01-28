@@ -115,9 +115,11 @@
             function prevSlide() {
                 showSlide(currentSlide - 1);
             }
+            const username = localStorage.getItem('username');
             if (username) {
                 document.getElementById('username-display').innerText = username;
             }
+    </script>
         </script>
     </section>
     <section class="slider-container">
