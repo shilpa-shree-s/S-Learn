@@ -65,7 +65,8 @@
 
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
+                <p id="masked-email" style="display: none;"></p>
+                
                 <label for="date">Preferred Visit Date:</label>
                 <input type="date" id="date" name="date" required>
                 
@@ -73,7 +74,7 @@
                 <input type="time" id="time" name="time" required>
                 
                 <label for="message">Additional Message:</label>
-                <textarea id="message" name="message" width="auto"></textarea>
+                <textarea id="message" name="message" style="width:100%;" width="auto"></textarea>
 
                 <button type="submit">Submit</button>
                 <button type="button" onclick="window.location.href='home.html'">Cancel</button>
@@ -138,7 +139,8 @@
         document.getElementById("email").addEventListener("input", function(event) {
             const email = event.target.value;
             const maskedEmail = maskEmail(email);
-            event.target.value = maskedEmail;
+            document.getElementById("masked-email").style.display = 'block';
+            document.getElementById("masked-email").textContent = `Masked Email: ${maskedEmail}`;
         });
     </script>
 </body>
